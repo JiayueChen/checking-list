@@ -36,7 +36,7 @@ function insertAItem($name, $deadline) {
 function deleteAItem(){
 	$pdo = new PDO('mysql:host=localhost;dbname=checking_list;charset=utf8mb4', 'root', 'root');
 
-	$stmt = $pdo->prepare("DELETE FROM items WHERE $item['name'] == $name");
+	$stmt = $pdo->prepare("DELETE FROM items WHERE $(this).val() == True");
 
 	$stmt->execute();
 }

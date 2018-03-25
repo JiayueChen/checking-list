@@ -64,33 +64,36 @@ $all_items = getAllItems();
 
 		<script type="text/javascript">
 			$("#Checkbox").click(function(){
-				var ischeck = $(this).attr("checked");
-				if (ischeck == undifined) {
-					$("#Checkbox']").show();
-				}else{
-						$("#Checkbox").hide();
-				}
-			});
+				$('input:checkbox').each(function() { 
+				if ($(this).attr('checked') == true) { 
+					return ($(this).val()); 
+				} 
+			}); 
+		});
+
+
+
 			
 
 
 
-		</script>
+	</script>
 
-		<form action="" method="post">
-			<div class="form-row">
-				<div class="col">
-					<input type="text" class="form-control" placeholder="Things to do" name="list_name">
-				</div>
-				<div class="col">
-					<input type="text" class="form-control" placeholder="YYYY-MM-DD" name="dead_line" pattern="(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)">
-				</div>
-				<button type="submit" class="btn btn-primary">Submit</button>
+	<form action="" method="post">
+		<div class="form-row">
+			<div class="col">
+				<input type="text" class="form-control" placeholder="Things to do" name="list_name">
 			</div>
-		</form>
+			<div class="col">
+				<input type="text" class="form-control" placeholder="YYYY-MM-DD" name="dead_line" pattern="(([0-9]{3}[1-9]|[0-9]{2}[1-9][0-9]{1}|[0-9]{1}[1-9][0-9]{2}|[1-9][0-9]{3})-(((0[13578]|1[02])-(0[1-9]|[12][0-9]|3[01]))|((0[469]|11)-(0[1-9]|[12][0-9]|30))|(02-(0[1-9]|[1][0-9]|2[0-8]))))|((([0-9]{2})(0[48]|[2468][048]|[13579][26])|((0[48]|[2468][048]|[3579][26])00))-02-29)">
+			</div>
+			<button type="submit" class="btn btn-primary">Submit</button>
+			<button type="button" id="">Delete finished</button>
+		</div>
+	</form>
 
 
-	</div>
+</div>
 
 
 
@@ -98,8 +101,8 @@ $all_items = getAllItems();
 
 
 
-	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 </html>
