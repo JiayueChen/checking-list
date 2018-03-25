@@ -46,16 +46,12 @@ $all_items = getAllItems();
 				
 				<?php 
 
-
 				foreach ($all_items as $item) {
 					echo "<tr>";
 					echo "<th scope='row'>". $item['id']."</th>";
 					echo "<td>".$item['name']."</td>";
-					echo "<br>";
 					echo "<td>".$item['deadline']."</td>";
-					echo "<td><input type='checkbox' id='blankCheckbox' value='option1'></td>";
-
-
+					echo "<td><input type='checkbox' id='Checkbox' ></td>";
 				}
 
 				?>
@@ -65,6 +61,21 @@ $all_items = getAllItems();
 
 
 		</table>
+
+		<script type="text/javascript">
+			$("#Checkbox").click(function(){
+				var ischeck = $(this).attr("checked");
+				if (ischeck == undifined) {
+					$("#Checkbox']").show();
+				}else{
+						$("#Checkbox").hide();
+				}
+			});
+			
+
+
+
+		</script>
 
 		<form action="" method="post">
 			<div class="form-row">
@@ -80,6 +91,9 @@ $all_items = getAllItems();
 
 
 	</div>
+
+
+
 
 
 
